@@ -1,0 +1,38 @@
+{
+  "name": "lizards-and-pumpkins/confog-reader",
+  "description": "Lizards & Pumpkins config reader",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Tim Bezhashvyly",
+      "email": "hello@lizardsandpumpkins.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4.0",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
+  "autoload": {
+    "psr-4": {
+      "LizardsAndPumpkins\\Util\\Config\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LizardsAndPumpkins\\Util\\Config\\": [
+        "vendor/lizards-and-pumpkins/catalog/tests/Unit/Suites"
+      ]
+    }
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpunit -c tests/Unit/phpunit.xml.dist"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
